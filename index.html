@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aurora Bistro — Modern Restaurant Menu (100% original & free)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top app bar -->
+  <header class="appbar" role="banner">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">✦</span>
+      <strong>Aurora&nbsp;Bistro</strong>
+    </div>
+
+    <div class="search-wrap">
+      <label class="visually-hidden" for="search">Search menu</label>
+      <input id="search" type="search" placeholder="Search dishes, ingredients…" 
+      autocomplete="off" />
+    </div>
+
+    <div class="cart-button">
+      <button id="toggleCart" class="btn ghost" aria-expanded="true" aria-controls="cartPanel">
+        Cart <span id="cartCount" class="badge" aria-live="polite">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Filters -->
+  <section class="filters" aria-label="Filters">
+    <div class="chips" role="group" aria-label="Categories">
+      <button class="chip active" data-cat="All" aria-pressed="true">All</button>
+      <button class="chip" data-cat="Starters" aria-pressed="false">Starters</button>
+      <button class="chip" data-cat="Mains" aria-pressed="false">Mains</button>
+      <button class="chip" data-cat="Desserts" aria-pressed="false">Desserts</button>
+      <button class="chip" data-cat="Drinks" aria-pressed="false">Drinks</button>
+    </div>
+
+    <div class="toggles" role="group" aria-label="Dietary">
+      <label class="toggle"><input id="fVegan" type="checkbox" /><span>Vegan</span></label>
+      <label class="toggle"><input id="fVeg" type="checkbox" /><span>Vegetarian</span></label>
+      <label class="toggle"><input id="fGF" type="checkbox" /><span>Gluten-free</span></label>
+      <label class="toggle"><input id="fSpicy" type="checkbox" /><span>Spicy</span></label>
+    </div>
+
+    <div class="sorter">
+      <label for="sort" class="visually-hidden">Sort menu</label>
+      <select id="sort" aria-label="Sort">
+        <option value="popular">Sort: Popular</option>
+        <option value="price-asc">Sort: Price ↑</option>
+        <option value="price-desc">Sort: Price ↓</option>
+        <option value="az">Sort: A–Z</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- Main grid -->
+  <main class="container">
+    <section id="menuGrid" class="grid" role="list" aria-label="Menu items"></section>
+  </main>
+
+  <!-- Cart / Order panel -->
+  <aside id="cartPanel" class="cart" aria-live="polite" aria-label="Order summary">
+    <header class="cart-header">
+      <h2>Your Order</h2>
+      <button id="clearCart" class="btn danger small">Clear</button>
+    </header>
+    <ul id="cartItems" class="cart-items"></ul>
+    <footer class="cart-footer">
+      <div class="line">
+        <span>Subtotal</span><strong id="cartSubtotal">€0.00</strong>
+      </div>
+      <div class="line small">
+        <span>Tax (7%)</span><span id="cartTax">€0.00</span>
+      </div>
+      <div class="line total">
+        <span>Total</span><strong id="cartTotal">€0.00</strong>
+      </div>
+      <div class="cart-actions">
+        <button id="checkout" class="btn primary">Checkout (demo)</button>
+        <button id="print" class="btn">Print</button>
+      </div>
+    </footer>
+  </aside>
+
+  <div id="live" class="visually-hidden" aria-live="polite"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
