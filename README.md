@@ -19,9 +19,3 @@ Watch the live demo here:
 
 ---
 
-## 🔗 Project Links
-- **GitHub repository:** `PASTE_GITHUB_REPO_URL_HERE`
-- **Live demo via GitHub Pages (optional):** enable **Settings → Pages** → Branch: `main` (root)
-
----
-
